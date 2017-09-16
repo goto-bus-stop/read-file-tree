@@ -1,0 +1,33 @@
+{
+  "name": "read-file-tree",
+  "description": "recursively read contents of all files in a directory",
+  "version": "0.0.0",
+  "author": "Renée Kooi <renee@kooi.me>",
+  "bugs": {
+    "url": "https://github.com/goto-bus-stop/read-file-tree/issues"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/goto-bus-stop/read-file-tree",
+  "keywords": [
+    "directory",
+    "fs"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goto-bus-stop/read-file-tree.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js | tap-spec"
+  },
+  "standard": {
+    "ignore": [
+      "test/fixture"
+    ]
+  }
+}
