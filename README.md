@@ -52,6 +52,10 @@ For example, the [test/fixture](./test/fixture) directory results in this object
         'd.txt': 'file d\n' } } } }
 ```
 
+### `readFileTree.sync(basedir[, opts])`
+
+The same, but sync. Returns `tree`.
+
 ## License
 
 [MIT](LICENSE.md)

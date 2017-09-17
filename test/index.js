@@ -20,3 +20,20 @@ test('read-file-tree', function (t) {
     t.end()
   })
 })
+
+test('sync', function (t) {
+  var tree = readFileTree.sync(path.join(__dirname, '/fixture'))
+  t.deepEqual(tree, {
+    'one.js': Buffer.from('1;\n'),
+    'two.js': Buffer.from('2;\n'),
+    a: {
+      b: {
+        'c.txt': Buffer.from('this is c\n'),
+        c: {
+          'd.txt': Buffer.from('file d\n')
+        }
+      }
+    }
+  })
+  t.end()
+})

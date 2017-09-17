@@ -60,3 +60,27 @@ module.exports = function readFileTree (basedir, opts, cb) {
     })
   }
 }
+
+module.exports.sync = function readFileTreeSync (basedir, opts) {
+  opts = opts || {}
+
+  assert.equal(typeof basedir, 'string', 'read-file-tree: basedir must be string')
+  assert.equal(typeof opts, 'object', 'read-file-tree: opts must be object')
+
+  return readSync(basedir)
+
+  function readSync (basedir) {
+    var parent = {}
+    var files = fs.readdirSync(basedir)
+    for (var i = 0; i < files.length; i++) {
+      var filename = files[i]
+      var fullname = path.join(basedir, filename)
+      if (fs.statSync(fullname).isDirectory()) {
+        parent[filename] = readSync(fullname)
+      } else {
+        parent[filename] = fs.readFileSync(fullname, opts.encoding || null)
+      }
+    }
+    return parent
+  }
+}
