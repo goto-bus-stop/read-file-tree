@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 1.1.0 - 2017-09-22
+### Added
+
+ - Sync version as `require('read-file-tree').sync`
+
 ## 1.0.0 - 2017-09-16
 ### Added
 
