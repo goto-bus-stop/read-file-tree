@@ -56,6 +56,10 @@ For example, the [test/fixture](./test/fixture) directory results in this object
 
 The same, but sync. Returns `tree`.
 
+## See Also
+
+ * [write-file-tree](https://github.com/goto-bus-stop/write-file-tree) - write an object to nested file tree, with one file for each value
+
 ## License
 
 [MIT](LICENSE.md)
