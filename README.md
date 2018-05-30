@@ -59,6 +59,12 @@ The same, but sync. Returns `tree`.
 ## See Also
 
  * [write-file-tree](https://github.com/goto-bus-stop/write-file-tree) - write an object to nested file tree, with one file for each value
+ * [flat](https://github.com/hughsk/flat) - flatten and unflatten objects—you can use this to create an object with relative paths as keys:
+   ```js
+   flat(readFileTree('./dest'), { delimiter: '/' })
+   // { 'a.txt': '',
+   //   'some/dir/name/b.txt': '' }
+   ```
 
 ## License
 
