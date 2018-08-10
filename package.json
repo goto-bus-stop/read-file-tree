@@ -7,9 +7,9 @@
     "url": "https://github.com/goto-bus-stop/read-file-tree/issues"
   },
   "devDependencies": {
-    "standard": "*",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.0"
+    "standard": "^11.0.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   },
   "homepage": "https://github.com/goto-bus-stop/read-file-tree",
   "keywords": [
