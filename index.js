@@ -8,9 +8,9 @@ module.exports = function readFileTree (basedir, opts, cb) {
     opts = {}
   }
 
-  assert.equal(typeof basedir, 'string', 'read-file-tree: basedir must be string')
-  assert.equal(typeof opts, 'object', 'read-file-tree: opts must be object')
-  assert.equal(typeof cb, 'function', 'read-file-tree: callback must be function')
+  assert.strictEqual(typeof basedir, 'string', 'read-file-tree: basedir must be string')
+  assert.strictEqual(typeof opts, 'object', 'read-file-tree: opts must be object')
+  assert.strictEqual(typeof cb, 'function', 'read-file-tree: callback must be function')
 
   read(basedir, cb)
 
@@ -64,8 +64,8 @@ module.exports = function readFileTree (basedir, opts, cb) {
 module.exports.sync = function readFileTreeSync (basedir, opts) {
   opts = opts || {}
 
-  assert.equal(typeof basedir, 'string', 'read-file-tree: basedir must be string')
-  assert.equal(typeof opts, 'object', 'read-file-tree: opts must be object')
+  assert.strictEqual(typeof basedir, 'string', 'read-file-tree: basedir must be string')
+  assert.strictEqual(typeof opts, 'object', 'read-file-tree: opts must be object')
 
   return readSync(basedir)
 
