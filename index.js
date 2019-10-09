@@ -18,6 +18,8 @@ module.exports = function readFileTree (basedir, opts, cb) {
     var parent = {}
     fs.readdir(basedir, function (err, files) {
       if (err) return cb(err)
+      if (files.length === 0) return cb(null, {})
+
       var done = 0
       for (var i = 0; i < files.length; i++) {
         onpath(files[i])
