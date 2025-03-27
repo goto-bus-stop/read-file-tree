@@ -23,7 +23,9 @@
     "url": "https://github.com/goto-bus-stop/read-file-tree.git"
   },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec"
+    "tests-only": "tape test/*.js",
+    "lint": "standard",
+    "test": "npm run lint && npm run tests-only | tap-spec"
   },
   "standard": {
     "ignore": [
